@@ -1,4 +1,5 @@
 #static {
+    overflow: hidden;
     margin: 0%;
     background-size: cover;
     filter: contrast(1000%) brightness(100%);
@@ -8,29 +9,104 @@
 }
 
 .flex-wrapper {
-    width: 100%;
+    width: 75%;
     display: flex;
     justify-content: space-evenly;
+    margin: auto;
 }
 
 .flex-wrapper div {
     display: flex;
     height: 100vh;
+    justify-content: center;
 }
 
 .flex-wrapper img {
-    max-height: 40vh;
+    height: 368px;
+}
+
+.text1 {
+    position: absolute;
+    color: #ff81f0;
+    font-size: 50px;
+    top: 285px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.text2 {
+    position: absolute;
+    color: #ff81f0;
+    font-size: 50px;
+    top: 45vh;
+    text-shadow: 2px 2px 2px black;
+}
+
+.text3 {
+    position: absolute;
+    color: #ff81f0;
+    font-size: 50px;
+    bottom: 295px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.text-bonus {
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    bottom: -5vh;
 }
 
 #ink1 {
     align-self: start;
+    display: flex;
 }
 
 #ink2 {
     align-self: center;
-    margin-bottom: 33%;
+    display: flex;
 }
 
 #ink3 {
     align-self: end;
+    display: flex;
+}
+
+#think-a-little-bit {
+    overflow: hidden;
+    margin: 0%;
+}
+
+#ink1r {
+    align-self: end;
+    display: flex;
+    filter: invert(1);
+    transform: scaleY(-1);
+}
+
+#ink2r {
+    align-self: center;
+    display: flex;
+    filter: invert(1);
+    transform: scaleY(-1);
+}
+
+#ink3r {
+    align-self: start;
+    display: flex;
+    filter: invert(1);
+    transform: scaleY(-1);
+}
+
+#home {
+    position: absolute;
+    color: black;
+    bottom: 0;
+    text-decoration: none;
+}
+
+#nowhere {
+    position: absolute;
+    color: black;
+    top: 0;
+    text-decoration: none;
 }
