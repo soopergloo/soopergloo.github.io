@@ -11,37 +11,58 @@ body {
     overflow: visible;
 }
 
-#temp {
+#silly-fish-selectable {
+    transform: rotate(-5deg);
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+#silly-fish-bio {
+    left: 15%;
+    top: 20%;
+}
+
+#silly-fish {
+    width: 50%;
+    margin-top: auto;
+    transform: rotate(-5deg);
+}
+
+.fish-selectable {
     position: absolute;
-    aspect-ratio: 1/1;
-    height: 16%;
-    background-color: green;
+    max-height: 16%;
     animation: click 0.001s forwards;
     animation-play-state: paused;
     z-index: 1;
 }
 
-#temp:hover {
+.fish-selectable:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
 
-#temp:active{
+.fish-selectable:active{
     animation: click 0.001s forwards;
     animation-play-state: running;
 }
 
-#bio {
+.bio {
     position: absolute;
-    left: 12%;
-    top: 5%;
-    aspect-ratio: 1.8/1;
-    height: 20%;
+    aspect-ratio: 2/1;
+    height: 30%;
     background-color: beige;
     opacity: 0;
+    border: dotted red;
 }
 
-#temp:active ~ #bio {
+.bio h1 {
+    float: right;
+    width: 50%;
+    text-decoration: underline;
+    margin: auto;
+}
+
+#silly-fish-selectable:active ~ #silly-fish-bio {
     opacity: 1;
     z-index: 2;
 }
@@ -55,9 +76,9 @@ body {
 
 @keyframes click {
     from {
-        background-color: black;
+        filter: brightness(0);
     }
     to {
-        background-color: auto;
+        filter: brightness(1);
     }
 }
