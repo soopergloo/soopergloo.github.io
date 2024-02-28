@@ -15,6 +15,7 @@ body {
     rotate: -5deg;
     margin-left: 10%;
     margin-top: 5%;
+    height: 16%;
 }
 
 #silly-fish-bio {
@@ -28,9 +29,27 @@ body {
     transform: rotate(-5deg);
 }
 
+#poopa-selectable {
+    margin-left: 65%;
+    margin-top: 13%;
+    height: 6%;
+    rotate: 5deg;
+}
+
+#poopa-bio {
+    left: 55%;
+    top: 18%;
+}
+
+#poopa {
+    width: 40%;
+    margin-top: 10%;
+    margin-left: 3%;
+    rotate: 5deg;
+}
+
 .fish-selectable {
     position: absolute;
-    height: 16%;
     animation: click 0.001s forwards;
     animation-play-state: paused;
     z-index: 1;
@@ -67,10 +86,65 @@ body {
     z-index: 2;
 }
 
+#poopa-selectable:active ~ #poopa-bio {
+    opacity: 1;
+    z-index: 2;
+}
+
 @media only screen and (max-width: 1000px) {
     body {
         height: 250vh;
-        overflow: visible;
+        width: 100vw;
+        align-content: center;
+        overflow-y: visible;
+        overflow-x: hidden;
+    }
+
+    #container {
+        height: 100%;
+    }
+
+    #silly-fish-selectable {
+        width: 50vw;
+        height: 50vw;
+        margin-top: 0;
+        margin-left: calc(50% - 25vw);
+    }
+
+    #silly-fish-bio {
+        left: calc(50vw - 40vw)
+    }
+
+    #silly-fish {
+        width: 75%;
+        margin-left: calc(50% - 37.5%);
+    }
+
+    #poopa-selectable {
+        width: 25vw;
+        height: auto;
+        margin-top: 60vw;
+        margin-left: calc(50% - 12.5vw);
+    }
+
+    #poopa-bio {
+        left: calc(50vw - 40vw);
+        top: 75vw;
+    }
+
+    #poopa {
+        width: 50%;
+        margin-left: calc(50% - 25%);
+    }
+
+    .bio {
+        aspect-ratio: 1/1.33;
+        width: 80vw;
+        height: auto;
+    }
+
+    .bio h1 {
+        float: none;
     }
 }
 
