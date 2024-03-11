@@ -13,7 +13,7 @@ body {
 
 #silly-fish-selectable {
     rotate: -5deg;
-    margin-left: 10%;
+    margin-left: 25%;
     margin-top: 5%;
     height: 16%;
 }
@@ -37,8 +37,8 @@ body {
 }
 
 #poopa-bio {
-    left: 55%;
-    top: 18%;
+    left: 45%;
+    top: 33%;
 }
 
 #poopa {
@@ -46,6 +46,54 @@ body {
     margin-top: 10%;
     margin-left: 3%;
     rotate: 5deg;
+}
+
+#tuna-selectable {
+    rotate: -5deg;
+    margin-left: 20%;
+    margin-bottom: 6%;
+}
+
+#tuna-bio {
+    left: 30%;
+    bottom: 20%;
+}
+
+#tuna {
+    width: 45%;
+    margin-left: 2%;
+    rotate: -5deg;
+}
+
+#shark-selectable {
+    margin-left: 65%;
+    margin-top: 5%;
+    rotate: 5deg;
+}
+
+#shark-bio {
+    margin-left: 45%;
+    margin-top: -2%;
+}
+
+#shark {
+    width: 45%;
+    margin-left: 2%;
+    rotate: 5deg;
+}
+
+#cirno-selectable {
+    margin-left: 45%;
+}
+
+#cirno-bio {
+    margin-left: 38%;
+    margin-top: 5%;
+}
+
+#cirno {
+    width: 45%;
+    margin-top: 2%;
 }
 
 .fish-selectable {
@@ -91,10 +139,26 @@ body {
     z-index: 2;
 }
 
+#tuna-selectable:active ~ #tuna-bio {
+    opacity: 1;
+    z-index: 2;
+}
+
+#shark-selectable:active ~ #shark-bio {
+    opacity: 1;
+    z-index: 2;
+}
+
+#cirno-selectable:active ~ #cirno-bio {
+    opacity: 1;
+    z-index: 2;
+}
+
 @media only screen and (max-width: 1000px) {
     body {
         height: 250vh;
         width: 100vw;
+        background: darkblue;
         align-content: center;
         overflow-y: visible;
         overflow-x: hidden;
@@ -123,13 +187,13 @@ body {
     #poopa-selectable {
         width: 25vw;
         height: auto;
-        margin-top: 60vw;
+        margin-top: 100vw;
         margin-left: calc(50% - 12.5vw);
     }
 
     #poopa-bio {
         left: calc(50vw - 40vw);
-        top: 75vw;
+        top: 115vw;
     }
 
     #poopa {
@@ -137,14 +201,49 @@ body {
         margin-left: calc(50% - 25%);
     }
 
+    #cirno-selectable {
+        width: 50vw;
+        height: 50vw;
+        margin-left: calc(50% - 25vw);
+    }
+
+    #cirno-bio {
+        left: -25%
+    }
+
+    #cirno {
+        width: 50%;
+        margin-left: calc(50% - 25%);
+    }
+
+    #tuna-selectable {
+        display: none;
+    }
+
+    #shark-selectable {
+        width: 50vw;
+        height: 50vw;
+        margin-left: calc(50% - 25vw);
+        margin-top: 60vw;
+    }
+
+    #shark-bio {
+        left: -30%;
+    }
+
+    #shark {
+        width: 50%;
+        margin-left: calc(50% - 25%);
+    }
+
     .bio {
-        aspect-ratio: 1/1.33;
+        aspect-ratio: 1/1.5;
         width: 80vw;
         height: auto;
     }
 
     .bio h1 {
-        float: none;
+        float: inline-start;
     }
 }
 
