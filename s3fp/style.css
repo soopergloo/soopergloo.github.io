@@ -63,6 +63,7 @@
 }
 
 #void {
+  display: block;
   position: absolute;
   background-color: black;
   top: 0;
@@ -89,6 +90,7 @@
 /* Code yoinked from https://css-loaders.com/ */
 
 .loader {
+  display: block;
   margin: auto;
   margin-top: -20px;
   width: 10px;
