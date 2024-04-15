@@ -1,10 +1,33 @@
 <head>
-    <title>the worst day of your life...</title>
+    <title>enter password</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
 </head>
 
 <body class="crt">
-    <div id="login"></div>
+    <div id="container">
+        <div id="login">
+            <div id="bar">
+                <span style="font-family: sans-serif;">&nbsp Login</span>
+            </div>
+            <img id="dp" src="assets/dp.gif" alt="cute anime girl profile picture">
+            <div id="text-container">xX_ball_123_Xx</div>
+            <input type="password" id="pw" required minlength="1">
+        </div>
+    </div>
 </body>
+
+<script>
+    var pw = document.getElementById("pw");
+
+    function checkPW() {
+        if (pw.value.length >= 1) {
+            location.href = "load.html"
+        }
+    }
+
+    pw.onkeyup = function (e) {
+        if (e.which == 13) checkPW();
+    }
+</script>
