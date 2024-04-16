@@ -21,13 +21,6 @@
 
 #bar {
   width: 396px;
-  height: 25px;
-  background-color: blue;
-  border-radius: 3px 3px 0px 0px;
-  margin: auto;
-  margin-top: 2px;
-  align-content: center;
-  color: white;
 }
 
 #dp {
@@ -85,6 +78,58 @@
   100% {
     opacity: 0;
   }
+}
+
+.popup {
+  position: absolute;
+}
+
+#nutrigrain {
+  width: 600px;
+  height: 250px;
+  background-color: darkgrey;
+  border-radius: 1%;
+  box-shadow: black 1px 1px;
+}
+
+#nutrigrain-bar {
+  width: 596px;
+}
+
+#nutrigrain-fill {
+  width: 596px;
+  height: 215px;
+  display: block;
+  background-color: brown;
+  margin: auto;
+  margin-top: 3px;
+  border-radius: 2%;
+  border: solid black 1px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#x {
+  aspect-ratio: 1;
+  width: 21px; 
+  background-color: red;
+  left: 574px;
+  top: 4px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar {
+  height: 25px;
+  background-color: blue;
+  margin: auto;
+  margin-top: 2px;
+  border-radius: 3px 3px 0px 0px;
+  align-content: center;
+  color: white;
 }
 
 /* Code yoinked from https://css-loaders.com/ */
