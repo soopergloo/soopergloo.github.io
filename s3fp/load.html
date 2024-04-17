@@ -1,0 +1,23 @@
+<head>
+    <title>Please wait...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="terminal" class="crt">
+    <div id="container">
+        <div id="login">
+            <div id="bar" class="bar">
+                <span style="font-family: sans-serif;">&nbsp Login</span>
+            </div>
+            <img id="dp" src="assets/dp.gif" alt="cute anime girl profile picture">
+            <div id="text-container">Signing in...</div>
+            <div id="ld" class="loader"></div>
+        </div>
+    </div>
+</body>
+
+<script>
+    setTimeout(() => {
+        location.href = "desktop.html";
+    }, 4000)
+</script>
