@@ -158,6 +158,10 @@
   display: flex;
 }
 
+#stop-stop:hover {
+  cursor: pointer;
+}
+
 /* Code yoinked from https://css-loaders.com/ */
 
 .loader {

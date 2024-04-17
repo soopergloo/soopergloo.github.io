@@ -5,7 +5,7 @@ let divs = ["<div id='nutrigrain' class='popup'><div id='nutrigrain-bar' class='
 let dim = [[600, 250], [280, 280]];
 
 function setup() {
-    frameRate(5);
+    frameRate(1);
 }
 
 function draw() {
