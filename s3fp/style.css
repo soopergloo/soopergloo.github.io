@@ -110,12 +110,15 @@
   justify-content: center;
 }
 
-#x {
-  aspect-ratio: 1;
-  width: 21px; 
-  background-color: red;
+#x1 {
   left: 574px;
   top: 4px;
+}
+
+.x {
+  aspect-ratio: 1;
+  width: 21px;
+  background-color: red;
   position: absolute;
   display: flex;
   align-items: center;
@@ -130,6 +133,29 @@
   border-radius: 3px 3px 0px 0px;
   align-content: center;
   color: white;
+}
+
+#stop {
+  aspect-ratio: 1;
+  width: 280px;
+  background-color: darkgrey;
+  border-radius: 1%;
+  box-shadow: black 1px 1px;
+}
+
+#stop-bar {
+  width: 276px;
+}
+
+#x2 {
+  left: 254px;
+  top: 4px;
+}
+
+#stop-wrapper {
+  aspect-ratio: 1;
+  width: 276px;
+  display: flex;
 }
 
 /* Code yoinked from https://css-loaders.com/ */
