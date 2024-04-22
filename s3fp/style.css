@@ -167,6 +167,41 @@
   cursor: pointer;
 }
 
+#turbo {
+  aspect-ratio: 1;
+  width: 320px;
+  border-radius: 1%;
+}
+
+#turbo-bar {
+  width: 321px;
+  box-shadow: black 1px 1px;
+}
+
+#x3 {
+  top: 4px;
+  left: 298px;
+}
+
+#boost-wrapper {
+  aspect-ratio: 1;
+  width: 320px;
+  display: flex;
+}
+
+#boost {
+  aspect-ratio: 1;
+  width: 318px;
+  margin-top: 1px;
+  margin-left: 1px;
+  border: solid black 1px;
+  box-shadow: black 1px 1px;
+}
+
+#boost:hover {
+  cursor: pointer;
+}
+
 /* Code yoinked from https://css-loaders.com/ */
 
 .loader {
