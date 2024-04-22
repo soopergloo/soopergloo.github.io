@@ -82,6 +82,7 @@
 
 .popup {
   position: absolute;
+  z-index: 10;
 }
 
 #nutrigrain {
@@ -123,6 +124,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.x:hover {
+  cursor: pointer;
 }
 
 .bar {
