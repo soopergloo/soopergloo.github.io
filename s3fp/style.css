@@ -82,7 +82,7 @@
 
 .popup {
   position: absolute;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 #nutrigrain {

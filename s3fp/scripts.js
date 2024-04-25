@@ -5,25 +5,26 @@ let divs = ["<div id='nutrigrain' class='popup'><div id='nutrigrain-bar' class='
             "<div id='stop' class='popup'><div id='stop-bar' class='bar'><span style='font-family: sans-serif;'>&nbsp maybe an escape to this mess</span><div id='x2' class='x' onclick=\"this.parentElement.parentElement.style.display = 'none';\"><span style='font-family: sans-serif; color: white;'>X</span></div></div><div id='stop-wrapper'><img id='stop-stop' src='assets/stop.gif' alt='a stop button'></div>"];
 // an array containing the [x, y]-dimensions of each div
 let dim = [[600, 250], [321, 321], [280, 280]];
+let fr = 1;
 
 let hi = 10;
 let incr = 0;
 
 function setup() {
-   setTimeout(frameRate(1), 3000);
+   setTimeout(frameRate(fr), 3000);
 }
 
 function draw() {
     // roll dictates whether we will draw on this frame
     roll = (int)(random(0, hi));
-    if (roll === 0) {
+    if (!roll) {
         let w = window.innerWidth;
         let h = window.innerHeight;
 
         // generates a random index of the array to be drawn
         // a higher frame rate will be quite chaotic. thus, at 24 fps we introduce the last element of divs
         // which is capable of stopping the calls to draw()
-        let i = frameRate() >= 24 ? (int)(random(0, 3)) : (int)(random(0, 2));
+        let i = fr >= 24 ? (int)(random(0, 3)) : (int)(random(0, 2));
         let elt = createDiv(divs[i]);
 
         // random positioning with accounting for overflow
@@ -45,8 +46,10 @@ document.addEventListener('click', function (e) {
     if (id === 'stop-stop') {
         noLoop();
     } else if (id === 'boost') {
-        fr = frameRate();
-        if (fr < 60) frameRate(fr + 1);
+        if (fr < 60) {
+            fr++;
+            frameRate(fr);
+        }
         target.parentElement.parentElement.style.display = 'none';
     }
 }, false);
