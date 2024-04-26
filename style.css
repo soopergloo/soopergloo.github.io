@@ -1,0 +1,25 @@
+body {
+    background-color: lightgrey;
+    display: block;
+    align-items: center;
+}
+
+#page1 {
+    background-color: white;
+    width: 50vw;
+    height: 105vh;
+    margin: auto;
+}
+
+#page1 h1 {
+    text-align: center;
+    padding-top: 3%;
+}
+
+#page {
+    background-color: white;
+    width: 50vw;
+    height: 105vh;
+    margin: auto;
+    margin-top: 2%;
+}
