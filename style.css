@@ -6,9 +6,9 @@ body {
 
 #page1 {
     background-color: white;
-    width: 50vw;
-    height: 105vh;
     margin: auto;
+    aspect-ratio: 1/1.414;
+    width: 40vw;
 }
 
 #page1 h1 {
@@ -19,7 +19,7 @@ body {
 #page {
     background-color: white;
     width: 50vw;
-    height: 105vh;
+    height: 100vh;
     margin: auto;
     margin-top: 2%;
 }

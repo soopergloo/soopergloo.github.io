@@ -202,6 +202,75 @@
   cursor: pointer;
 }
 
+#money {
+  aspect-ratio: 1;
+  width: 200px;
+  border-radius: 1%;
+  background-color: darkgray;
+}
+
+#money-bar {
+  width: 196px;
+}
+
+#x4 {
+  top: 4px;
+  left: 176px;
+}
+
+#money-wrapper {
+  display: flex;
+  justify-content: center;
+  aspect-ratio: 1;
+  width: 100%;
+}
+
+#money-money {
+  transform: scale(0.97);
+  border: solid black 2px; 
+}
+
+#money-money:hover {
+  cursor: pointer;
+}
+
+#money-counter {
+  position: absolute;
+  z-index: 100;
+  font-size: 125px;
+  animation: 1s rainbow infinite linear;
+}
+
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  12.5% {
+    color: orange;
+  }
+  25% {
+    color: yellow;
+  }
+  37.5% {
+    color: green;
+  }
+  50% {
+    color: blue;
+  }
+  62.5% {
+    color: indigo;
+  }
+  75% {
+    color: purple;
+  }
+  87.5% {
+    color: hotpink;
+  }
+  100% {
+    color: red;
+  }
+}
+
 /* Code yoinked from https://css-loaders.com/ */
 
 .loader {
