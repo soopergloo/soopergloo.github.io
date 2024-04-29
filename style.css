@@ -4,11 +4,18 @@ body {
     align-items: center;
 }
 
+#page1 p {
+    text-align: center;
+    font-family: serif;
+    font-size: small;
+}
+
 #page1 {
     background-color: white;
     margin: auto;
     aspect-ratio: 1/1.414;
     width: 40vw;
+    text-wrap: wrap;
 }
 
 #page1 h1 {
@@ -16,10 +23,22 @@ body {
     padding-top: 3%;
 }
 
-#page {
+#page1 h4 {
+    text-align: center;
+}
+
+#preface-wrapper {
+    margin: auto;
+    inline-size: 66.67%;
+    overflow-wrap: break-word;
+    hyphens: manual;
+    margin-top: -15px;
+}
+
+.page {
     background-color: white;
-    width: 50vw;
-    height: 100vh;
+    aspect-ratio: 1/1.414;
+    width: 40vw;
     margin: auto;
     margin-top: 2%;
 }
