@@ -5,7 +5,7 @@ body {
 }
 
 #page1 p {
-    text-align: center;
+    text-align: left;
     font-family: serif;
     font-size: small;
 }
@@ -33,6 +33,7 @@ body {
     overflow-wrap: break-word;
     hyphens: manual;
     margin-top: -15px;
+    text-align: start;
 }
 
 .page {
@@ -41,4 +42,33 @@ body {
     width: 40vw;
     margin: auto;
     margin-top: 2%;
+}
+
+#toc {
+    margin: auto;
+    inline-size: 80%;
+    overflow-wrap: break-word;
+    hyphens: manual;
+}
+
+#toc-entry {
+    font-weight: bold;
+}
+
+#text-wrapper {
+    margin: auto;
+    text-align: start;
+    inline-size: 66.67%;
+    overflow-wrap: break-word;
+    hyphens: manual;
+}
+
+.page h1 {
+    padding-top: 12.5%;
+    margin-left: 12.5%;
+    text-align: start;
+}
+
+#i {
+    transform: scale(0.75);
 }
