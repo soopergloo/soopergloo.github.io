@@ -1,81 +1,467 @@
 <head>
     <title>portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
 </head>
 
 <body>
-    <div id="page1">
-        <h1>DSGN 1020 Portfolio
-            <br><span style="font-size: small; font-family: sans-serif;">Works and Reading Reponses in Art of the
-                Web</span>
-        </h1>
-        <h4>Preface</h4>
-        <div id="preface-wrapper">
-            <p id="preface>">
-                This is a portfolio of my work for <span style="font-style: italic;">DSGN 1020: Art of the Web</span> at
-                the University of Pennsylvania, which I took during the Spring 2024 semester. It comprises various works
-                created in HTML, CSS, and JavaScript, as well as responses to readings assigned throughout the semester.
-                This portfolio is meant to imitate the style one might encounter when reading a PDF in Google Chrome or
-                Mozilla Firefox (or whatever browser one might use).
-                It is also partly inspired by my interactions in LaTeX, an environment which I have become wholly
-                familiar with in my time at Penn.
-            </p>
-        </div>
-        <h4>Table of Contents</h4>
-        <table id="toc">
-            <tr>
-                <td id="toc-entry">
-                    i. suwako fumo ascii art
-                </td>
-            </tr>
-            <tr>
-                <td id="toc-entry">
-                    ii. html-css still life
-                </td>
-            </tr>
-            <tr>
-                <td id="toc-entry">
-                    iii. peep the onslaught
-                </td>
-            </tr>
-            <tr>
-                <td id="toc-entry">
-                    iv. class webring
-                </td>
-            </tr>
-            <tr>
-                <td id="toc-entry">
-                    v. so i like fishing levels
-                </td>
-            </tr>
-            <tr>
-                <td id="toc-entry">
-                    vi. p5js cassette clock
-                </td>
-            </tr>
-            <tr>
-                <td id="toc-entry">
-                    vii. os-symphony
-                </td>
-            </tr>
-            <tr>
-                <td id="toc-entry">
-                    viii. sound devils
-                </td>
-            </tr>
-            <tr>
-                <td id="toc-entry">
-                    ix. the worst day of my life
-                </td>
-            </tr>
-        </table>
+    <span id="hell" style="color: lightblue; font-size: xx-large;">my eternity work desk</span>
+    <div id="text-container">
+        <span id="portfolio"
+            style="inline-size: 50%; color: blue; cursor: pointer; text-decoration: underline;">portfolio.pdf</span>
+        <br>
+        <span id="rr"
+            style="inline-size: 50%; color: blue; cursor: pointer; text-decoration: underline;">reading_responses.pdf</span>
     </div>
-    <div id="p1" class="page">
-        <div id="text-wrapper">
-            <h1>suwako fumo ascii art</h1>
-            <p>ah... touhou.
-                <img id="i" src="portfolio/i.PNG" alt="suwako fumo ascii art">
-            </p>
+
+    <div id="pdf1" class='pdf'>
+        <img id="pdf1-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf." class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header"
+                style="text-align: center; font-size: x-large; cursor: text;">portfolio.pdf</span><span
+                style="cursor: text;"> - it's draggable!</span>
         </div>
+        <div id="container-s">
+            about this portfolio ---
+        </div>
+        <div id="container">
+            well uhmmmmmmmm it sort of started as something inspired by the TeX typesetting system or even a pdf.
+            as it turns out, this was a pretty boring and unexciting space to work in. <br>
+            <br>
+            so i pondered (as i do) and i settled for this sort of... virtual pseudo-document sort of thing. i enjoy
+            its playfulness much more than the seriousness of the pdf simulator that once occupied this space.<br>
+            <br>
+            <span style="font-weight: bold;">to move the pdf, just click and drag the icon in the top left.
+                you can exit by clicking the X in the top right. you can move forward and backward using the arrows
+                located at the bottom of the page</span><br>
+            <br>
+            otherwise, what follows is a table of contents and my works for dsgn 1020 at penn for the s'24
+            semester. <br>
+            <br>
+            yep!
+        </div>
+        <div id="rarrow">--></div>
     </div>
+
+    <div id="pdf2" class="pdf">
+        <img id="pdf2-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf." class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header" style="text-align: center; font-size: x-large; cursor: text;">contents</span>
+        </div>
+        <div id="container-s">
+            a table of such:<br>
+            <span style="font-size: xx-small;">simply click to navigate to the page</span>
+        </div>
+        <div id="container">
+            <span style="cursor: default"><br>
+                <span id="i">i. ascii art</span><br>
+                <span id="ii">ii. still life</span><br>
+                <span id="iii">iii. peep the onslaught</span><br>
+                <span id="iv">iv. webring</span><br>
+                <span id="v">v. fishing game</span><br>
+                <span id="vi">vi. cassette clock</span><br>
+                <span id="vii">vii. os-symphony</span><br>
+                <span id="viii">viii. sound devils</span><br>
+                <span id="ix">ix. the worst day of my life...</span>
+            </span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="pdf3" class="pdf">
+        <img id="pdf3-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf." class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header" style="text-align: center; font-size: x-large; cursor: text;">ascii art</span>
+        </div>
+        <div id="container-s">
+            <span style="font-size: xx-small; font-weight: bold;">simply click the image to go the piece
+                itself:</span>
+            <a href="https://codepen.io/Tyler-Basile/pen/MWxEbxK"><img id="ascii" src="portfolio/i.PNG"
+                    alt="a suwako fumo"></a>
+            <br>ascii art
+        </div>
+        <div id="container">
+            <span style="font-size: smaller;">ah... touhou, my beloved. the character pictured above is SUWAKO
+                MORIYA from the semi-popular, semi-niche
+                series, Touhou Project. <br>
+                <br>
+                the ascii art thereof is the ascii-ification of that very picture! i think ascii art is very
+                endearing, it is almost nostalgic to me.<br>
+                <br>
+                so i kind of wanted to go for a sort of... forum-signature-esque sort of creature. turns out, it
+                looks pretty weird on different
+                monitors and resolutions!<br>
+                <br>
+                the ascii itself was a selection of bird hieroglyphs, which is sort of disconnected from the subject
+                since suwako has nothing to do with birds; she is more froggish if anything.</span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="pdf4" class="pdf">
+        <img id="pdf4-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf." class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header" style="text-align: center; font-size: x-large; cursor: text;">ascii art</span>
+        </div>
+        <div id="container-s">
+            <span style="font-size: smaller;"> i like the colors of
+                the work too; they are sort of inspired by nature, like grass and wheat fields
+                sort of.
+                to add to this, i am unsure of why exactly, but i heavily associate suwako with nature. <br>
+                <br>
+                a lot of her imagery involves snakes and frogs, and she herself is an earth goddess of sorts.
+                the game she comes from is also one of the more
+                nature-y entries in the series.<br>
+                <br>
+                retrospectively speaking, i would probably approach an ascii art a little bit different than
+                what i did here. hieroglyphs are fun,
+                but they proved to be unconvenient since they all vary in their character space. even the use of
+                monospace proved to be
+                ineffective.<br>
+                <br>
+                i had to tediously go through the birds, building up a system which can produce the picture
+                while maintaining a consistent character space--despite my best efforts, it is little jank
+                in some areas, and this is made very obvious through different screen sizes.</span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="pdf5" class="pdf">
+        <img id="pdf5-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf."
+            class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header" style="text-align: center; font-size: x-large; cursor: text;">still
+                life</span>
+        </div>
+        <a href="https://codepen.io/Tyler-Basile/pen/bGZaQBO">
+            <div id="still"></div>
+        </a>
+        <div id="container-s"><span style="margin-top: -5%;">still life</span></div>
+        <div id="container">
+            <span style="font-size: smaller;"><br>
+                this is a still life composed entirely out of html divs and css styling.<br>
+                <br>
+                <span style="margin-left: -20%;">actually this was my first time EVER spinning html and
+                    css</span><br>
+                <br>
+                and certainly it was interesting and fun to experiment with. but the still life was not
+                quite my cup of tea<br>
+                <br>
+                <span style="margin-left: -20%;">i learned the importance of using wrappers</span><br>
+                <br>
+                well it was ok at first. but the more elements i felt like adding, the more frustrating the
+                process became<br>
+                <br>
+                <span style="margin-left: -20%;">and acquainted myself with some of html's quirks</span><br>
+                <br>
+                but revisiting it, i am kind of happy with it.<br>
+                <br>
+                <span style="margin-left: -20%;">i'd say i'm happy with it! but never again.</span>
+            </span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="pdf6" class="pdf">
+        <img id="pdf6-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf."
+            class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header" style="text-align: center; font-size: x-large; cursor: text;">peep the
+                onslaught</span>
+        </div>
+
+        <div id="container-s"><span style="margin-top: -5%;"><a
+                    href="https://soopergloo.github.io/s1fp/">
+                    <img id="peep" src="s1fp/ink1.gif" alt="a vile splotch of ink">
+                </a>
+                <br>peep the onslaught</span></div>
+        <div id="container">
+            <span style="font-size: smaller;">
+                there was a certain point where i realized that i LOVE adding TEXT TEXT TEXT
+                to these things. i don't really know why-- it's probably bc i love talking to myself
+                (LOL)<br>
+                <br>
+                and i know that i am doing the exact same thing here and i am like... man i should
+                probably deviate
+                from this sort of thing. no one wants to read a novel.<br>
+                <br>
+                in any case, this website is meant to represent those grimy basement venues often
+                associated with
+                the underground of music. much like this portfolio, it provides a sort of personal
+                context to this
+                physical space.<br>
+                <br>
+                honestly for my first ever website i am still damn happy with it! it was fun to make,
+                and as i continued
+                with this medium, i find that i really enjoy trying to... simulate some sort of state of
+                being.
+            </span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="pdf7" class="pdf">
+        <img id="pdf7-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf."
+            class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header" style="text-align: center; font-size: x-large; cursor: text;">peep
+                the onslaught</span>
+        </div>
+        <div id="container-s">
+            <span style="font-size: smaller;">also, since making this site, i HAVE moshed.<br>
+                <br>
+                upon my revisit, i think i would add some more user interactivity within the site.
+                the only thing you can do
+                is click on things and read the incoherent spewings of some guy. just like this one.
+            </span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="pdf8" class="pdf">
+        <img id="pdf8-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf."
+            class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header"
+                style="text-align: center; font-size: x-large; cursor: text;">webring</span>
+        </div>
+
+        <div id="container-s">
+            <a href="https://soopergloo.github.io/s1fp/">
+                <img id="peep" src="s1fp/ink1.gif" alt="a vile splotch of ink">
+            </a>
+            <br><span style="margin-top: -5%;">webring</span>
+        </div>
+        <div id="container">
+            <span style="font-size: smaller;">
+                this is the class webring. we all chose to submit an image and have a single
+                person
+                host it all on one url. i chose the above image to represent my website
+                because...
+                it was easy!<br>
+                <br>
+                i don't think i really appreciated the webring. the readings were cool but
+                the idea didn't go all the way home for me. i was much more interested in neat
+                little websites on geocities (i love that early web aesthetic so much!)<br>
+                <br>
+                recently i came across perhaps more authentic examples of webrings and i think
+                it is super neat how they persist even in today's internet. it also makes me
+                think
+                way too much about the internet itself!<br>
+                <br>
+                so much of my own life and childhood has revolved around this space, and it
+                intrigues me how communities just sort of... pop up.
+            </span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="pdf9" class="pdf">
+        <img id="pdf9-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf."
+            class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header"
+                style="text-align: center; font-size: x-large; cursor: text;">webring</span>
+        </div>
+        <div id="container-s">
+            <span style="font-size: smaller;">it is also weird to me that not everyone is on
+                the internet
+                and that the internet impacts people in completely different ways and it is
+                insane to me
+                just how RECENT the internet is because well for me it has always been
+                around in my life right?
+                like before the internet, what the hell did people do? chop down trees?
+                wheelbarrow things around?
+                i basically cannot conceive of what life without internet would be like
+                because it has always
+                existed for me and that is weird!!!!!!!!!!! and it is also weird that at a
+                certain age in my life
+                i was basically internet-free and now i can't get off for the life of me!
+                not that i am complaining but...<br>
+                <br>
+                yeesh anyways! webrings really got me thinking about how people form
+                communities and how these communities
+                can be likened to, like, how communities are in real life and stuff its
+                weird its weird its weird!</span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="pdf10" class="pdf">
+        <img id="pdf10-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf."
+            class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header"
+                style="text-align: center; font-size: x-large; cursor: text;">fishing
+                game</span>
+        </div>
+
+        <div id="container-s"><a href="https://soopergloo.github.io/s2a2/">
+                <img id="fish" src="s2a2/silly_fish.gif" alt="it's a silly fish!">
+            </a>
+            <br><span style="margin-top: -5%;">fishing game</span>
+        </div>
+        <div id="container">
+            <span style="font-size: smaller;">
+                i really like how this one turned out. 'tis an ode to fishing games or minigames or levels
+                of video games which involve fishing. like animal crossing or stardew valley or something like 
+                that!<br>
+                <br>
+                though, i was <span style="font-style: italic;">reaaaaally</span> inspired by 5S in Ultrakill.<br>
+                good game btw i cannot recommend enough if you like boomer shooters! <br>
+                <br>
+                the main challenge of this website was to find a way to transition from one state to another permanently
+                without any javascript. animation play-states ended up being a really interesting solution and i learned
+                the method from a previous student's work.<br>
+                <br>
+                of course upon revisit, i would 1000% just do this using javascript.
+            </span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="pdf11" class="pdf">
+        <img id="pdf11-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf."
+            class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header"
+                style="text-align: center; font-size: x-large; cursor: text;">fishing game</span>
+        </div>
+        <div id="container-s">
+            <span style="font-size: smaller;">just fiddling around, you sort of realize it is slightly awkward.
+            and the fact that you have to hold your click to see the info-cards is pretty clunky.<br>
+            <br>
+            nonetheless, i had a blast making this one, too, and alot of my later works just end up being
+            inspired by things i like! fishing in games?? awesome!<br>
+            <br>
+            this is also the only one of my works to feature media rules. i would love to utilize it more, but
+            i find it so horrendously tedious trying to get things just right on mobile and also it is so awkward
+            to test for a mobile screen on my, yknow, not-cellular-device-sized monitor!<br>
+            <br>
+            <span style="font-size: xx-small;"">also the power in my apartment went out making this and it was out for like 
+            an entire week! i managed to get power in my kitchen and bathroom but oh my gosh what an uncomfortable workstation!</span>
+        </span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="pdf12" class="pdf">
+        <img id="pdf12-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf."
+            class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header"
+                style="text-align: center; font-size: x-large; cursor: text;">cassette clock</span>
+        </div>
+
+        <div id="container-s"><a href="https://editor.p5js.org/soopergloo/sketches/iqfC3OjNZ">
+                <img id="bm" src="portfolio/bm.png" alt="a cassette tape of a paysage d'hiver album">
+            </a>
+            <br><span style="margin-top: -5%;">cassette clock</span>
+        </div>
+        <div id="container">
+            <span style="font-size: smaller;">
+                my first taste of javascript ever! even now, i am a little confused on how it even works.<br>
+                <br>
+                but man, it feels good to write code like this.<br>
+                <br>
+                this is again a music-inspired work. this time, rather than a place, it is a thing; the most humble
+                of all physical manifestations of music, the most gnarly, the most kvlt; THE CASSETTE TAPE!!!!<br>
+                <br>
+                while the cassette clock is really just a generic cassette, i really had black metal in mind when making this. 
+                i think it is an awesome and extreme sub genre of metal but it has such an odd history and array of characters,
+                that it is best for me to not talk about it at all. but i guess it is no surprise that there are a number of
+                horrible people associated with this genre.<br>
+                <br>
+                i like staticy noises alright! and the crushing solitude of a winter which never ends!
+            </span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="pdf13" class="pdf">
+        <img id="pdf13-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf."
+            class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header"
+                style="text-align: center; font-size: x-large; cursor: text;">cassette clock</span>
+        </div>
+        <div id="container-s">
+            <span style="font-size: smaller;">anyways, let's actually talk about the damn thing...<br>
+                <br>
+                there's not much i have to say actually! my favorite part was the inclusion of a digital clock 
+                featured on the cassette. it communicates both that it is indeed a clock and that it moves with
+                the seconds but ALSO i think it is a neat juxtaposition of something incredibly analog with 
+                something digital, and it is all being represented digitally anyway!<br>
+                <br>
+                i thought it was neat.
+        </span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="pdf14" class="pdf">
+        <img id="pdf14-move" src="portfolio/piipii.png"
+            alt="someone wearing a watermelon hat! you can click and drag her to move the pdf."
+            class="move">
+        <div id="x" onclick="this.parentElement.style.display = 'none';">x</div>
+        <div id="container-header">
+            <span id="pdf-header"
+                style="text-align: center; font-size: x-large; cursor: text;">os-symphony</span>
+        </div>
+
+        <div id="container-s"><a href="https://os-symphony.neocities.org/">
+                <img id="tux" src="portfolio/tux.png" alt="it's tux, the mascot of linux!">
+            </a>
+            <br><span style="margin-top: -5%;">os-symphony</span>
+        </div>
+        <div id="container">
+            <span style="font-size: smaller;">
+                tba
+            </span>
+        </div>
+        <div id="larrow"><--</div>
+        <div id="rarrow">--></div>
+    </div>
+
+    <div id="rr-text"></div>
 </body>
+
+<script src="script.js"></script>
