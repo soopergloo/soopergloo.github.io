@@ -181,3 +181,39 @@ html, body {
 #tux:hover {
     transform: scale(-1, 1);
 }
+
+#donut {
+    max-width: 33%;
+    margin-left: 33%;
+}
+
+#ball {
+    max-width: 33%;
+    margin-left: 33%;
+    border-radius: 50%;
+}
+
+#ball:hover {
+    animation: 5s spin infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: none;
+    }
+    20% {
+        transform: rotate(72deg);
+    }
+    40% {
+        transform: rotate(144deg);
+    }
+    60% {
+        transform: rotate(216deg);
+    }
+    80% {
+        transform: rotate(288deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

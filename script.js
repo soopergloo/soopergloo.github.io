@@ -1,5 +1,5 @@
 let page = 1;
-let n = 15;
+let n = 19;
 let rr_text = document.getElementById('rr-text');
 
 document.addEventListener('click', function (e) {
@@ -78,9 +78,11 @@ function tocCheck(id) {
   } else if (id === 'vii') {
     changePage(14);
   } else if (id === 'viii') {
-
+    changePage(15);
   } else if (id === 'ix') {
-
+    changePage(16);
+  } else if (id === 'x1') {
+    changePage(18);
   }
 }
 
@@ -107,7 +109,6 @@ fetch("portfolio/rr.txt")
 
 function setup() {
   frameRate(10);
-  noLoop();
 }
 
 function draw() {
